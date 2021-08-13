@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Leaflet CSS  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+    <!-- Leaflet JS  -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="style.css">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <header class="title">
+        <div>
+            <img class="profile" src="Images/Pic.jpeg">
+            <h1>John Smith</h1>
+            <form id="form" role="search">
+                <input type="search" id="query" name="q" placeholder="Name..." aria-label="Search through site content">
+                <button class="btn">Search</button>
+            </form>
+        </div>
+    </header>
+
+
+    <div class="grid-container">
+        <div class="grid-item rh">
+            <h2>Record History</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>BlotterID</th>
+                        <th>Instance Type</th>
+                        <th>Instance Narrative</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23</td>
+                        <td>Motor Theft</td>
+                        <td>Stole a 2012 Honda Civic without consent from owner.</td>
+                    </tr>
+                    <tr>
+                        <td>567</td>
+                        <td>Assult</td>
+                        <td>Punched victim in the face outisde of Dive Bar on Short Vine</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="grid-item ah">
+            <h2>Address History</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>BlotterID</th>
+                        <th>Instance Type</th>
+                        <th>Instance Narrative</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23</td>
+                        <td>Motor Theft</td>
+                        <td>Stole a 2012 Honda Civic without consent from owner.</td>
+                    </tr>
+                    <tr>
+                        <td>567</td>
+                        <td>Assult</td>
+                        <td>Punched victim in the face outisde of Dive Bar on Short Vine</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="grid-item vh">
+            <h2>Vehicle History</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Vehicle Type</th>
+                        <th>Vehicle Make</th>
+                        <th>Vehicle Model</th>
+                        <th>Vehicle Color</th>
+                        <th>License Plate Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sedan</td>
+                        <td>Ford</td>
+                        <td>2012 Taurus</td>
+                        <td>Silver</td>
+                        <td>EXAMPLE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="grid-container2">
+        <div class="grid-item rt">
+            <h2>Record Timeline</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>BlotterID</th>
+                        <th>Date Occured</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23</td>
+                        <td>7/9/2019</td>
+                    </tr>
+                    <tr>
+                        <td>567</td>
+                        <td>4/19/2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="grid-item mp">
+            <h2>Map</h2>
+            <div id="UCmap"></div>
+        </div>
+        <div class="grid-item so">
+            <h2>Summary of Offenses</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>BlotterID</th>
+                        <th>Offense</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23</td>
+                        <td>Theft</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>567</td>
+                        <td>Assult</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="grid-container3">
+        <div class="grid-item kr">
+            <h2>Known relevance</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Relevance</th>
+                        <th>UC ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Student</td>
+                        <td>M999999</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="grid-item ka">
+            <h2>Known Associates</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Associate's First Name</th>
+                        <th>Last Name</th>
+                        <th>Date Of Birth</th>
+                        <th>Relationship</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <footer><img class="UCimage" src="Images/UClogo.jpg"><br>2021 University of Cincinnati Public Safety <br> 51 West Corry Boulevard - Cincinnati, OH 45221 <br> Prototype creatd by Eddie Satterley</footer>
+
+
+    <script>
+        var myUCmap = L.map('UCmap').setView([39.1329, -84.5150], 13)
+
+        var mark1 = L.circleMarker([39.129424, -84.509434], {
+            color: "red",
+            fillColor: "red"
+        }).addTo(myUCmap);
+        mark1.bindPopup("<b>BlotterID: 567</b><br>Assult").openPopup();
+
+        var mark2 = L.circleMarker([39.128183, -84.518404], {
+            color: "red",
+            fillColor: "red"
+        }).addTo(myUCmap);
+        mark2.bindPopup("<b>BlotterID: 23</b><br>Motor Theft").openPopup();
+
+        var A1 = L.circleMarker([39.132482, -84.521562], {
+            color: "blue",
+            fillColor: "blue"
+        }).addTo(myUCmap);
+        A1.bindPopup("<b>AddressID: 2</b><br>Apartment").openPopup();
+
+        var A2 = L.circleMarker([39.126232, -84.523489], {
+            color: "blue",
+            fillColor: "blue"
+        }).addTo(myUCmap);
+        A2.bindPopup("<b>AddressID: 1</b><br>House").openPopup();
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1Ijoic2F0dGVyZWUiLCJhIjoiY2txdXkzeG1uMDkzMTJucTZwOWVxMjk0bCJ9.fkkGeQ9_ysN3FIEGknvLnQ'
+        }).addTo(myUCmap);
+    </script>
+    <!-- Bootstrap Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
